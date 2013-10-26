@@ -2,8 +2,27 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
+    <script type="text/javascript" src="/Content/Scripts/jquery-1.6.4.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('#add-event').click(function() {
+                $.ajax({                    
+                    type: 'POST',
+                    url: 'add-event'
+                }).done(function() {
+                    location.reload();
+                });
+            });
+        });
+    </script>
 </head>
 <body>
-    Hello Hack Manchester
+    <h2>Hello Hack Manchester</h2>
+    <a href="#" id="add-event">Add a new event</a>
+    <ul>
+        @Each.Events
+        <li>@Current.Id</li>
+        @EndEach
+    </ul>
 </body>
 </html>
