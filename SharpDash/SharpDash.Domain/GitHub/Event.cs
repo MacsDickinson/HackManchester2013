@@ -9,5 +9,8 @@ namespace SharpDash.Domain.GitHub
     public class Event
     {
         public string Id { get; set; }
+        public string Type { get; set; }
+        public User Actor { get; set; }
+        public Repository Repo { get; set; }
     }
 }

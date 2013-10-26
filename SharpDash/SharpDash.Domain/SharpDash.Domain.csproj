@@ -40,7 +40,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GitHub\Event.cs" />
-    <Compile Include="GitHub\Events.cs" />
     <Compile Include="GitHub\Organisation.cs" />
     <Compile Include="GitHub\Repository.cs" />
     <Compile Include="GitHub\User.cs" />
