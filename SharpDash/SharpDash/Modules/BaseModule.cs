@@ -11,7 +11,7 @@ namespace SharpDash.Modules
     {
         public BaseModule(IDocumentSession documentSession)
         {
-            Get["/"] = ಠ_ಠ =>
+            Get["/event"] = ಠ_ಠ =>
             {
                 var model = new IndexViewModel {Events = documentSession.Query<Event>().ToList()};
                 return View["Index", model];

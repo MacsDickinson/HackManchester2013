@@ -1,4 +1,5 @@
 ﻿using Nancy;
+using Nancy.Authentication.Forms;
 
 namespace SharpDash.Modules
 {
@@ -8,6 +9,8 @@ namespace SharpDash.Modules
             : base("/Session")
         {
             Get["Login"] = _ => View["Login"];
+
+            Get["Logout"] = _ => this.LogoutAndRedirect("~/Session/Login");
         }
     }
 }
