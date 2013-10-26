@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpDash", "SharpDash\SharpDash.csproj", "{C99DEC0E-F9C6-4E59-852B-17E0A303D307}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{44893610-CAF7-4353-84B8-74353CCC4344}"
@@ -13,6 +15,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpDash.Tests", "SharpDash.Tests\SharpDash.Tests.csproj", "{7E43F173-47CA-4A85-96EA-75DC614F8764}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpDash.Domain", "SharpDash.Domain\SharpDash.Domain.csproj", "{D837CB36-C9A7-43F9-A1B5-1F1A426D55D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nancy.SimpleAuthentication", "Nancy.SimpleAuthentication\Nancy.SimpleAuthentication.csproj", "{94B8D947-6CAD-42C3-B328-F369CE7BC6C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleAuthentication.ExtraProviders", "SimpleAuthentication.ExtraProviders\SimpleAuthentication.ExtraProviders.csproj", "{D75207D5-FA68-4DC6-939A-2AC3CAD4BEAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleAuthentication.Core", "SimpleAuthentication.Core\SimpleAuthentication.Core.csproj", "{F94E2140-8262-4463-8054-0B1DCE8ABE03}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +40,18 @@ Global
 		{D837CB36-C9A7-43F9-A1B5-1F1A426D55D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D837CB36-C9A7-43F9-A1B5-1F1A426D55D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D837CB36-C9A7-43F9-A1B5-1F1A426D55D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94B8D947-6CAD-42C3-B328-F369CE7BC6C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94B8D947-6CAD-42C3-B328-F369CE7BC6C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94B8D947-6CAD-42C3-B328-F369CE7BC6C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94B8D947-6CAD-42C3-B328-F369CE7BC6C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D75207D5-FA68-4DC6-939A-2AC3CAD4BEAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D75207D5-FA68-4DC6-939A-2AC3CAD4BEAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D75207D5-FA68-4DC6-939A-2AC3CAD4BEAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D75207D5-FA68-4DC6-939A-2AC3CAD4BEAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F94E2140-8262-4463-8054-0B1DCE8ABE03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F94E2140-8262-4463-8054-0B1DCE8ABE03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F94E2140-8262-4463-8054-0B1DCE8ABE03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F94E2140-8262-4463-8054-0B1DCE8ABE03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

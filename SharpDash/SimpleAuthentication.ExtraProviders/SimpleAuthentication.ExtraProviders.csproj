@@ -47,9 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Shared Assembly Info\SharedAssemblyInfo.cs">
-      <Link>Properties\SharedAssemblyInfo.cs</Link>
-    </Compile>
     <Compile Include="AmazonProvider.cs" />
     <Compile Include="Amazon\AccessTokenResult.cs" />
     <Compile Include="Amazon\UserInfoResult.cs" />
