@@ -10,6 +10,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{448936
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpDash.Tests", "SharpDash.Tests\SharpDash.Tests.csproj", "{7E43F173-47CA-4A85-96EA-75DC614F8764}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpDash.Domain", "SharpDash.Domain\SharpDash.Domain.csproj", "{D837CB36-C9A7-43F9-A1B5-1F1A426D55D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +24,14 @@ Global
 		{C99DEC0E-F9C6-4E59-852B-17E0A303D307}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C99DEC0E-F9C6-4E59-852B-17E0A303D307}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C99DEC0E-F9C6-4E59-852B-17E0A303D307}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E43F173-47CA-4A85-96EA-75DC614F8764}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E43F173-47CA-4A85-96EA-75DC614F8764}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E43F173-47CA-4A85-96EA-75DC614F8764}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E43F173-47CA-4A85-96EA-75DC614F8764}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D837CB36-C9A7-43F9-A1B5-1F1A426D55D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D837CB36-C9A7-43F9-A1B5-1F1A426D55D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D837CB36-C9A7-43F9-A1B5-1F1A426D55D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D837CB36-C9A7-43F9-A1B5-1F1A426D55D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
