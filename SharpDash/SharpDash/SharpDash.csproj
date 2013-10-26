@@ -119,8 +119,10 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bootstrapper.cs" />
     <Compile Include="Modules\BaseModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Raven\RavenSessionProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
