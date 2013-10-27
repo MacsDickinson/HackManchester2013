@@ -1,4 +1,6 @@
 ﻿using System.Web.Routing;
+using Microsoft.AspNet.SignalR;
+using Microsoft.AspNet.SignalR.Hubs;
 using Nancy;
 using Nancy.Authentication.Forms;
 using Nancy.Bootstrapper;
@@ -65,7 +67,7 @@ namespace SharpDash
             base.ApplicationStartup(container, pipelines);
             CookieBasedSessions.Enable(pipelines);
             RouteTable.Routes.MapHubs();
-            Conventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("signalr"));
+            container.Register(GlobalHost.ConnectionManager.GetHubContext<EventHub>());
         }
     }
 }

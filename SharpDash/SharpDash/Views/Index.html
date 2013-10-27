@@ -19,27 +19,19 @@
         $(function () {
             var hub = $.connection.eventHub;
 
-            hub.client.broadcastEventId = function(id) {
-                return $('#events').append($('<li />', {
-                    val: id
+            hub.client.broadcastEventId = function (id) {
+                debugger;
+                $('#events').append($('<li />', {
+                    text: id
                 }));
             };
             
-            $.connection.hub.start().done(function() {
-                $('#crappy').on('click', function () {
-                    hub.server.send(10);
-                });
-            });
-            
+            $.connection.hub.start();
 
-            
-            
             $('#add-event').click(function () {
                 $.ajax({
                     type: 'POST',
                     url: 'add-event'
-                }).done(function(id) {
-                    hub.server.send(id);
                 });
             });
         });
