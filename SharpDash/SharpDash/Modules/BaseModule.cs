@@ -22,6 +22,8 @@ namespace SharpDash.Modules
                 var newEvent = new Event();
                 documentSession.Store(newEvent);
 
+
+
                 return newEvent.Id;
             };
         }
