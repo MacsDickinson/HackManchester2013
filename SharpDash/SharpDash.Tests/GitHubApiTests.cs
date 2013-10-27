@@ -43,8 +43,16 @@ namespace SharpDash.Tests
             var request = new RestRequest("repos/macsdickinson/hackmanchester2013/stats/punch_card");
 
             // Act
+            //var response = client.Execute<List<PunchCard>>(request);
             var response = client.Execute(request);
-            var stats = JsonConvert.DeserializeObject<List<PunchCard>>(response.Content);
+            var result = JsonConvert.DeserializeObject<dynamic>(response.Content);
+
+            var statistics = new List<Statistic>();
+            foreach (var item in result)
+            {
+                var statistic = new Statistic {Day = item[0], Hour = item[1], Commits = item[2]};
+                statistics.Add(statistic);
+            }
 
             // Assert
             Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
