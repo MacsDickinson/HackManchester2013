@@ -1,5 +1,12 @@
-﻿using Nancy;
+﻿using System.Web.Routing;
+using Microsoft.AspNet.SignalR;
+using Microsoft.AspNet.SignalR.Hubs;
+using Nancy;
 using Nancy.Authentication.Forms;
+using Nancy.Bootstrapper;
+using Nancy.Conventions;
+using Nancy.Session;
+using Nancy.TinyIoc;
 using Raven.Client;
 using SharpDash.Raven;
 using SharpDash.Session;
@@ -53,6 +60,14 @@ namespace SharpDash
             };
 
             FormsAuthentication.Enable(pipelines, formsAuthConfiguration);
+        }
+
+        protected override void ApplicationStartup(TinyIoCContainer container, IPipelines pipelines)
+        {
+            base.ApplicationStartup(container, pipelines);
+            CookieBasedSessions.Enable(pipelines);
+            RouteTable.Routes.MapHubs();
+            container.Register(GlobalHost.ConnectionManager.GetHubContext<EventHub>());
         }
     }
 }

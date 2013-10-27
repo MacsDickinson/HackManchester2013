@@ -2,27 +2,39 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
-    <script type="text/javascript" src="/Content/Scripts/jquery-1.6.4.js"></script>
-    <script type="text/javascript">
-        $(function() {
-            $('#add-event').click(function() {
-                $.ajax({                    
-                    type: 'POST',
-                    url: 'add-event'
-                }).done(function() {
-                    location.reload();
-                });
-            });
-        });
-    </script>
 </head>
 <body>
     <h2>Hello Hack Manchester</h2>
+    <input type="button" id="crappy" value="clickme"/>
     <a href="#" id="add-event">Add a new event</a>
-    <ul>
+    <ul id="events">
         @Each.Events
         <li>@Current.Id</li>
         @EndEach
     </ul>
+    <script type="text/javascript" src="/Content/Scripts/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="/Content/Scripts/jquery.signalR-1.1.1.min.js"></script>
+    <script type="text/javascript" src="/signalr/hubs"></script>
+    <script type="text/javascript">
+        $(function () {
+            var hub = $.connection.eventHub;
+
+            hub.client.broadcastEventId = function (id) {
+                debugger;
+                $('#events').append($('<li />', {
+                    text: id
+                }));
+            };
+            
+            $.connection.hub.start();
+
+            $('#add-event').click(function () {
+                $.ajax({
+                    type: 'POST',
+                    url: 'add-event'
+                });
+            });
+        });
+    </script>
 </body>
 </html>

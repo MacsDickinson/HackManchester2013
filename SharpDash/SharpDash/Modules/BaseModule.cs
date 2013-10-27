@@ -1,5 +1,6 @@
 ﻿using System.Dynamic;
 using System.Linq;
+using Microsoft.AspNet.SignalR;
 using Nancy;
 using Raven.Client;
 using SharpDash.Domain.GitHub;
@@ -9,7 +10,7 @@ namespace SharpDash.Modules
 {
     public class BaseModule : NancyModule
     {
-        public BaseModule(IDocumentSession documentSession)
+        public BaseModule(IDocumentSession documentSession, IHubContext hubContext)
         {
             Get["/event"] = ಠ_ಠ =>
             {
@@ -21,6 +22,8 @@ namespace SharpDash.Modules
             {
                 var newEvent = new Event();
                 documentSession.Store(newEvent);
+
+                hubContext.Clients.All.broadcastEventId(newEvent.Id);
 
                 return newEvent.Id;
             };

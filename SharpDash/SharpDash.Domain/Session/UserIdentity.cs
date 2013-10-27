@@ -19,6 +19,8 @@ namespace SharpDash.Domain.Session
             } 
         }
 
+        public List<string> TwitterFeeds { get; set; } 
+
         public IEnumerable<string> Claims { get; private set; }
     }
 }
